@@ -28,7 +28,7 @@ async def on_ready():
 async def on_message(message):
     y = '[,. 0123456789 _+\-.\\,!@#$%^&*();\/|<>"]'
     for w in words:
-        if re.search(y+w+y,message.content) or message.content == w:
+        if re.search(y+w+y,message.content,re.IGNORECASE) or message.content.startswith(w) or message.content.endswith(w):
             print(message.content)
             await client.send_message(message.channel, "Whoa there "+ message.author.mention+ " , watch your mouth!")
             client.delete_message(message)
