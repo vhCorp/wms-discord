@@ -1,0 +1,6 @@
+{
+  "name": "WMS Discord bot",
+  "description": "A bot for my server.",
+  "image": "heroku/python",
+  "keywords": ["python", "discord" ],
+}
